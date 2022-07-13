@@ -2,8 +2,8 @@
   "name": "frontend",
   "version": "0.0.0",
   "scripts": {
-    "start:prod": "docker-compose up -d prod_frontend",
-    "start:dev": "docker-compose up -d dev_frontend",
+    "start:prod": "docker-compose up prod_frontend",
+    "start:dev": "docker-compose up dev_frontend",
     "ng": "ng",
     "ng-start": "ng serve",
     "ng-build": "ng build",
