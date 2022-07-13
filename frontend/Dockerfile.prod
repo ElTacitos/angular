@@ -1,0 +1,18 @@
+FROM node:16 as build
+
+# setup workspace
+RUN mkdir -p /home/app
+WORKDIR /home/app
+
+# install angular
+RUN npm install -g @angular/cli
+
+# copy files
+COPY . /home/app/
+RUN npm ci
+RUN ng build
+
+# start nginx server
+FROM nginx:1.21.6
+EXPOSE 80
+COPY --from=build /home/app/dist/frontend /usr/share/nginx/html

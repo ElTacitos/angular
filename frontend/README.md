@@ -2,34 +2,14 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.5.
 
-## Docker Build
+We advise you run this project via the provided docker-compose file to ensure that all dependencies are installed.
 
-Run `npm run build` to build a docker image with the project in it.
+## Start with hot reloading
 
-## Docker Start
+Run `npm run start:dev` to start the frontend with hot reloading. Navigate to http://localhost:4200 to see the application.
+The docker is using the `ng serve` command.
 
-Run `npm run start` to start the project in a docker container. Navigate to `http://localhost/`.
+## Start like in production
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `npm run ng-build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Run `npm run start:prod` to start the frontend in production mode. Navigate to http://localhost:8080 to see the application.
+The docker is using the `ng build` command and a nginx serve.

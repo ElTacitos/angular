@@ -2,9 +2,8 @@
   "name": "frontend",
   "version": "0.0.0",
   "scripts": {
-    "build": "docker build -t frontend:latest -f Dockerfile .",
-    "prestart": "docker ps -q --filter \"name=frontend\" | grep -q . && docker stop frontend &&  docker rm frontend",
-    "start": "docker run -d -p 80:80 --name frontend frontend:latest",
+    "start:prod": "docker-compose up -d prod_frontend",
+    "start:dev": "docker-compose up -d dev_frontend",
     "ng": "ng",
     "ng-start": "ng serve",
     "ng-build": "ng build",
