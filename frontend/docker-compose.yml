@@ -1,0 +1,22 @@
+version: '3.3'
+
+services:
+  dev_frontend:
+    container_name: devFrontend
+    ports:
+      - "4200:4200"
+    command: "ng serve --host 0.0.0.0 --poll=2000 --port 4200"
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      - ./:/home/app
+      - /home/app/node_modules
+
+  prod_frontend:
+    container_name: prodFrontend
+    ports:
+      - "8080:80"
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
