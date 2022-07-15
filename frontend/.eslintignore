@@ -4,3 +4,4 @@ dist
 .idea
 .angular
 .vscode
+karma.conf.js
