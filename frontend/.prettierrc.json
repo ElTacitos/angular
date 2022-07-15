@@ -1,0 +1,7 @@
+{
+  "tabWidth": 2,
+  "singleQuote": false,
+  "quoteProps": "consistent",
+  "singleAttributePerLine": true,
+  "endOfLine": "auto"
+}
