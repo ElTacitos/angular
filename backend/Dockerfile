@@ -1,5 +1,5 @@
 # Node version
-FROM node:14-alpine as build
+FROM node:16-alpine as build
 
 # Set the working directory
 WORKDIR /app
@@ -14,7 +14,7 @@ RUN npm install
 RUN npm run build
 
 # Production image, copy all the files and run next
-FROM node:14-alpine AS runner
+FROM node:16-alpine AS runner
 WORKDIR /app
 
 RUN addgroup -g 1001 -S nodejs
