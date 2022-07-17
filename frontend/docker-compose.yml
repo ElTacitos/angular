@@ -20,3 +20,12 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.prod
+
+  test_frontend:
+    container_name: testFrontend
+    build:
+        context: .
+        dockerfile: Dockerfile.test
+    volumes:
+      - ./:/home/app
+      - /home/app/node_modules
