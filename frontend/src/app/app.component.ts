@@ -12,7 +12,7 @@ interface GeneralResponse {
   templateUrl: "./app.component.html",
 })
 export class AppComponent {
-  title = "frontend";
+  title = "Appli Blanche";
   response = "";
 
   // eslint-disable-next-line no-useless-constructor,no-unused-vars,no-empty-function
