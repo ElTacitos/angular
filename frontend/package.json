@@ -4,6 +4,7 @@
   "scripts": {
     "start:prod": "docker-compose up prod_frontend",
     "start:dev": "docker-compose up dev_frontend",
+    "test": "docker-compose up test_frontend",
     "ng": "ng",
     "ng-start": "ng serve",
     "ng-build": "ng build",
