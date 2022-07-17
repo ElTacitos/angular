@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
+import { environment } from "../environments/environment";
 
 interface GeneralResponse {
   message: string;
@@ -19,7 +20,7 @@ export class AppComponent {
 
   helloThere() {
     this.http
-      .get<GeneralResponse>("http://localhost:3000/api/hello")
+      .get<GeneralResponse>(`${environment.backendUrl}/hello`)
       .subscribe((data: GeneralResponse) => {
         this.response = data.message;
       });
