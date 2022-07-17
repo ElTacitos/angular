@@ -1,6 +1,7 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { IHelloResponse } from './interfaces';
 
 describe('AppController', () => {
   let appController: AppController;
@@ -15,8 +16,10 @@ describe('AppController', () => {
   });
 
   describe('root', () => {
-    it('should return "Hello World!"', () => {
-      expect(appController.getHello()).toBe('Hello World!');
+    it("should return { message: 'General Kenobi!' }", () => {
+      const expectedObject: IHelloResponse = { message: 'General Kenobi!' };
+
+      expect(appController.getHello()).toMatchObject(expectedObject);
     });
   });
 });
