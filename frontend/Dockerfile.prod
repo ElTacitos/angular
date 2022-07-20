@@ -1,15 +1,7 @@
-FROM node:16 as build
-
-# setup workspace
-RUN mkdir -p /home/app
-WORKDIR /home/app
-
-# install angular
-RUN npm install -g @angular/cli
+FROM registry.cri.epita.fr/ing/majeures/sigl/ubsi/devops/appliblanche/frontend:latest as build
 
 # copy files
 COPY . /home/app/
-RUN npm ci
 RUN ng build
 
 # start nginx server

@@ -3,12 +3,10 @@ version: '3.3'
 services:
   dev_frontend:
     container_name: devFrontend
+    image: registry.cri.epita.fr/ing/majeures/sigl/ubsi/devops/appliblanche/frontend:latest
     ports:
       - "4200:4200"
-    command: "ng serve --host 0.0.0.0 --poll=2000 --port 4200"
-    build:
-      context: .
-      dockerfile: Dockerfile.dev
+    command: ["ng", "serve", "--host", "0.0.0.0", "--poll=2000", "--port", "4200"]
     volumes:
       - ./:/home/app
       - /home/app/node_modules
@@ -23,9 +21,7 @@ services:
 
   test_frontend:
     container_name: testFrontend
-    build:
-        context: .
-        dockerfile: Dockerfile.test
+    image: registry.cri.epita.fr/ing/majeures/sigl/ubsi/devops/appliblanche/frontend_test:latest
     volumes:
       - ./:/home/app
       - /home/app/node_modules

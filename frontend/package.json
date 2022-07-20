@@ -1,20 +1,14 @@
 {
   "name": "frontend",
   "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "start:prod": "docker-compose up prod_frontend",
+    "start:prod": "docker-compose up --build prod_frontend",
     "start:dev": "docker-compose up dev_frontend",
     "test": "docker-compose up test_frontend",
-    "ng": "ng",
-    "ng-start": "ng serve",
-    "ng-build": "ng build",
-    "ng-watch": "ng build --watch --configuration development",
-    "ng-test": "ng test",
     "prelint": "npx prettier 'src/**/*.{js,jsx,ts,tsx,html,css,scss}' --write",
-    "lint": "npx eslint 'src/**/*.{js,jsx,ts,tsx}' --fix",
-    "format": "npx prettier 'src/**/*.{js,jsx,ts,tsx,html,css,scss}' --write"
+    "lint": "npx eslint 'src/**/*.{js,jsx,ts,tsx}' --fix"
   },
-  "private": true,
   "dependencies": {
     "@angular/animations": "^14.0.0",
     "@angular/common": "^14.0.0",
