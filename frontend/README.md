@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://memegenerator.net/img/instances/46938721.jpg" width="200" alt="Devops Logo" />
+  <img src="https://logo.devops.ubsi.fr" width="200" alt="Devops Logo" />
   <a href="http://angular.io/" target="blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/640px-Angular_full_color_logo.svg.png" width="200" alt="Angular Logo" /></a>
   <p align="center">UBSI Application Blanche frontend built with <a href="https://angular.io/docs" target="_blank">Angular</a>.</p>
 </p>
