@@ -1,10 +1,10 @@
-import { Test, TestingModule } from '@nestjs/testing';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { IHelloResponse } from './interfaces';
+import { Test, TestingModule } from '@nestjs/testing';
 
 describe('AppController', () => {
-  let appController: AppController;
+  let appController: AppController = null;
 
   beforeEach(async () => {
     const app: TestingModule = await Test.createTestingModule({

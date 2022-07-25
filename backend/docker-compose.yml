@@ -41,3 +41,15 @@ services:
     volumes:
       - ./:/home/app
       - /home/app/node_modules
+
+  lint_backend:
+    container_name: lintBackend
+    image: registry.cri.epita.fr/ing/majeures/sigl/ubsi/devops/appliblanche/frontend:latest
+    command:  >
+      sh -c "
+        npx prettier '{src,test}/**/*.ts' --write &&
+        npx eslint '{src,apps,libs,test}/**/*.ts' --fix
+      "
+    volumes:
+      - ./:/home/app
+      - /home/app/node_modules

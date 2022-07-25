@@ -1,9 +1,11 @@
-import { Injectable } from '@nestjs/common';
 import { IHelloResponse } from './interfaces';
+import { Injectable } from '@nestjs/common';
 
 @Injectable()
 export class AppService {
+  private response = 'General Kenobi!';
+
   getHello(): IHelloResponse {
-    return { message: 'General Kenobi!' };
+    return { message: this.response };
   }
 }
