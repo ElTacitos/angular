@@ -30,10 +30,10 @@ yarn-error.log
 .history/*
 
 # Miscellaneous
-/.angular/cache
+*/.angular/cache
 .sass-cache/
 /connect.lock
-/coverage
+*/coverage
 /libpeerconnection.log
 testem.log
 /typings
@@ -41,3 +41,20 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# compiled output
+*/dist
+*/node_modules
+
+# Logs
+logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Tests
+/coverage
+/.nyc_output
