@@ -25,3 +25,15 @@ services:
     volumes:
       - ./:/home/app
       - /home/app/node_modules
+
+  lint_frontend:
+    container_name: lintFrontend
+    image: registry.cri.epita.fr/ing/majeures/sigl/ubsi/devops/appliblanche/frontend:latest
+    command:  >
+      sh -c "
+        npx prettier 'src/**/*.{js,jsx,ts,tsx,html,css,scss}' --write &&
+        npx eslint 'src/**/*.{js,jsx,ts,tsx}' --fix
+      "
+    volumes:
+      - ./:/home/app
+      - /home/app/node_modules

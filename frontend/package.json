@@ -6,8 +6,7 @@
     "start:prod": "docker-compose up --build prod_frontend",
     "start:dev": "docker-compose up dev_frontend",
     "test": "docker-compose up test_frontend",
-    "prelint": "npx prettier 'src/**/*.{js,jsx,ts,tsx,html,css,scss}' --write",
-    "lint": "npx eslint 'src/**/*.{js,jsx,ts,tsx}' --fix"
+    "lint": "docker-compose up lint_frontend"
   },
   "dependencies": {
     "@angular/animations": "^14.0.0",
