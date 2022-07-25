@@ -1,15 +1,38 @@
-# Frontend
+<p align="center">
+  <img src="https://memegenerator.net/img/instances/46938721.jpg" width="200" alt="Devops Logo" />
+  <a href="http://angular.io/" target="blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/640px-Angular_full_color_logo.svg.png" width="200" alt="Angular Logo" /></a>
+  <p align="center">UBSI Application Blanche frontend built with <a href="https://angular.io/docs" target="_blank">Angular</a>.</p>
+</p>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.5.
+## Running the app
 
-We advise you run this project via the provided docker-compose file to ensure that all dependencies are installed.
+```bash
+# development
+$ npm run start:dev
 
-## Start with hot reloading
+# build and run production mode
+$ npm run start:prod
+```
 
-Run `npm run start:dev` or `docker-compose up dev_frontend` to start the frontend with hot reloading. Navigate to http://localhost:4200 to see the application.
-The docker is using the `ng serve` command.
+## Test
 
-## Start like in production
+```bash
+# e2e tests
+$ npm run test
+```
 
-Run `npm run start:prod` or `docker-compose up prod_frontend` to start the frontend in production mode. Navigate to http://localhost:8080 to see the application.
-The docker is using the `ng build` command and a nginx serve.
+## Lint
+```bash
+# run prettier and linter
+$ npm run lint
+```
+
+## Support
+
+If you need help, send us a ticket at **2023-sigl-ubsi@ml.cri.epita.fr** with the object **\[DEVOPS]\[\<APPLICATION>] \<Titre>**
+
+<p align="center">
+  <br>
+  <br>
+  La CI n'est pas une moulinette
+</p>
