@@ -1,10 +1,10 @@
 // This file is required by karma.conf.js and loads recursively all the .spec and framework files
-import "zone.js/testing";
+import 'zone.js/testing';
 import {
   BrowserDynamicTestingModule,
   platformBrowserDynamicTesting,
-} from "@angular/platform-browser-dynamic/testing";
-import { getTestBed } from "@angular/core/testing";
+} from '@angular/platform-browser-dynamic/testing';
+import { getTestBed } from '@angular/core/testing';
 
 /* eslint-disable no-unused-vars */
 // eslint-disable-next-line init-declarations
@@ -27,6 +27,6 @@ getTestBed().initTestEnvironment(
 );
 
 // Then we find all the tests.
-const context = require.context("./", true, /\.spec\.ts$/);
+const context = require.context('./', true, /\.spec\.ts$/);
 // And load the modules.
 context.keys().forEach(context);
