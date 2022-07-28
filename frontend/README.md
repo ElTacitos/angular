@@ -7,10 +7,10 @@
 ## Running the app
 
 ```bash
-# development
+# development access at localhost:4200
 $ npm run start:dev
 
-# build and run production mode
+# build and run production mode access at localhost:8080
 $ npm run start:prod
 ```
 
