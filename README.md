@@ -1,14 +1,7 @@
 <p align="center">
-  <img src="https://logo.devops.ubsi.fr" width="200" alt="Devops Logo" />
+  <a href="http://angular.io/" target="blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/640px-Angular_full_color_logo.svg.png" width="200" alt="Angular Logo" /></a>
+  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
 </p>
 
-# Application Blanche
-This is the basic application skeleton.\
-You will create your app by adding components and services.\
-You can find detailed usage of the frontend and backend in their respective folders.
-
-<p align="center">
-  <br>
-  <br>
-  La CI n'est pas une moulinette
-</p>
+# Angular Nest App
+This is the basic application skeleton.
