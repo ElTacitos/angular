@@ -1,11 +1,14 @@
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { RouterTestingModule } from '@angular/router/testing';
 import { TestBed } from '@angular/core/testing';
 
 async function configureTestingModule(): Promise<void> {
   await TestBed.configureTestingModule({
     declarations: [AppComponent],
-    imports: [RouterTestingModule],
+    imports: [RouterTestingModule, HttpClientModule],
+    schemas: [NO_ERRORS_SCHEMA],
   }).compileComponents();
 }
 
