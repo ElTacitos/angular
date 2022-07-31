@@ -1,5 +1,4 @@
-FROM node:16
-
+FROM node:current-alpine3.16
 # setup workspace
 RUN mkdir -p /home/app
 WORKDIR /home/app

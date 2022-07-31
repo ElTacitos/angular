@@ -3,8 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start:prod": "docker-compose up -d --build prod_backend",
-    "start:dev": "docker-compose up dev_backend",
+    "start": "docker-compose up dev_backend",
     "test": "docker-compose up test_backend",
     "test:cov": "docker-compose up test_coverage_backend",
     "test:e2e": "docker-compose up test_e2e_backend",

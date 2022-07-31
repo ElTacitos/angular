@@ -3,7 +3,8 @@ version: '3.3'
 services:
   dev_frontend:
     container_name: devFrontend
-    image: registry.cri.epita.fr/ing/majeures/sigl/ubsi/devops/appliblanche/frontend:latest
+    image: ubsi/devops/appliblanche/frontend:latest
+    build: .
     ports:
       - "4200:4200"
     command: ["ng", "serve", "--host", "0.0.0.0", "--poll=2000", "--port", "4200"]
@@ -11,24 +12,28 @@ services:
       - ./:/home/app
       - /home/app/node_modules
 
-  prod_frontend:
-    container_name: prodFrontend
-    ports:
-      - "8080:80"
-    build:
-      context: .
-      dockerfile: Dockerfile.prod
-
   test_frontend:
     container_name: testFrontend
-    image: registry.cri.epita.fr/ing/majeures/sigl/ubsi/devops/appliblanche/frontend_test:latest
+    image: ubsi/devops/appliblanche/frontend:latest
+    build: .
+    command: ["ng", "test"]
+    volumes:
+      - ./:/home/app
+      - /home/app/node_modules
+
+  test_coverage_frontend:
+    container_name: testFrontend
+    image: ubsi/devops/appliblanche/frontend:latest
+    build: .
+    command: [ "ng", "test", "--no-watch", "--code-coverage"]
     volumes:
       - ./:/home/app
       - /home/app/node_modules
 
   lint_frontend:
     container_name: lintFrontend
-    image: registry.cri.epita.fr/ing/majeures/sigl/ubsi/devops/appliblanche/frontend:latest
+    image: ubsi/devops/appliblanche/frontend:latest
+    build: .
     command:  >
       sh -c "
         npx prettier 'src/**/*.{js,jsx,ts,tsx,html,css,scss}' --write &&

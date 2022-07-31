@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start:prod": "docker-compose up --build prod_frontend",
-    "start:dev": "docker-compose up dev_frontend",
+    "start": "docker-compose up dev_frontend",
     "test": "docker-compose up test_frontend",
+    "test:cov": "docker-compose up test_coverage_frontend",
     "lint": "docker-compose up lint_frontend"
   },
   "dependencies": {

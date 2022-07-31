@@ -2,25 +2,19 @@ version: '3.2'
 services:
   dev_backend:
     container_name: devBackend
+    image: ubsi/devops/appliblanche/backend:latest
+    build: .
     ports:
       - '3000:3000'
-    image: registry.cri.epita.fr/ing/majeures/sigl/ubsi/devops/appliblanche/backend:latest
     command: [ "nest", "start", "--watch" ]
     volumes:
       - ./:/home/app
       - /home/app/node_modules
 
-  prod_backend:
-    container_name: prodBackend
-    ports:
-      - '3000:3000'
-    build:
-      context: .
-      dockerfile: 'Dockerfile.prod'
-
   test_backend:
     container_name: testBackend
-    image: registry.cri.epita.fr/ing/majeures/sigl/ubsi/devops/appliblanche/backend:latest
+    image: ubsi/devops/appliblanche/backend:latest
+    build: .
     command: [ "npx", "jest", "--watchAll" ]
     volumes:
       - ./:/home/app
@@ -28,7 +22,8 @@ services:
 
   test_coverage_backend:
     container_name: testCoverageBackend
-    image: registry.cri.epita.fr/ing/majeures/sigl/ubsi/devops/appliblanche/backend:latest
+    image: ubsi/devops/appliblanche/backend:latest
+    build: .
     command: [ "npx", "jest", "--coverage" ]
     volumes:
       - ./:/home/app
@@ -36,7 +31,8 @@ services:
 
   test_e2e_backend:
     container_name: testE2EBackend
-    image: registry.cri.epita.fr/ing/majeures/sigl/ubsi/devops/appliblanche/backend:latest
+    image: ubsi/devops/appliblanche/backend:latest
+    build: .
     command: [ "npx", "jest", "--config", "./test/jest-e2e.json" ]
     volumes:
       - ./:/home/app
@@ -44,7 +40,8 @@ services:
 
   lint_backend:
     container_name: lintBackend
-    image: registry.cri.epita.fr/ing/majeures/sigl/ubsi/devops/appliblanche/frontend:latest
+    image: ubsi/devops/appliblanche/backend:latest
+    build: .
     command:  >
       sh -c "
         npx prettier '{src,test}/**/*.ts' --write &&

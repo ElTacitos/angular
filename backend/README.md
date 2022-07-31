@@ -7,11 +7,8 @@
 ## Running the app
 
 ```bash
-# development access at localhost:3000
-$ npm run start:dev
-
-# build and run production mode access at localhost:3000
-$ npm run start:prod
+# access at localhost:3000
+$ npm run start
 ```
 
 ## Test
@@ -20,7 +17,7 @@ $ npm run start:prod
 # unit tests
 $ npm run test
 
-# e2e tests
+# endpoints tests
 $ npm run test:e2e
 
 # test coverage

@@ -7,11 +7,8 @@
 ## Running the app
 
 ```bash
-# development access at localhost:4200
-$ npm run start:dev
-
-# build and run production mode access at localhost:8080
-$ npm run start:prod
+# access at localhost:4200
+$ npm run start
 ```
 
 ## Test
@@ -19,6 +16,9 @@ $ npm run start:prod
 ```bash
 # e2e tests
 $ npm run test
+
+# test coverage
+$ npm run test:cov
 ```
 
 ## Lint
